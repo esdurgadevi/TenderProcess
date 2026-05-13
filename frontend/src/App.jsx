@@ -1,14 +1,18 @@
 
-import './App.css'
+import { BrowserRouter, useRoutes } from "react-router-dom";
+import routes from "./routes.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
+const AppRoutes = () => {
+  const routing = useRoutes(routes);
+  return routing;
+};
 
+const App = () => {
   return (
-    <>
-      
-    </>
-  )
-}
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
